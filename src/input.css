@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-image: url('../public/images/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-size:800px ;
+    background-position: top -10rem right -12rem;
+}
+
+
+#testimonial{
+     background-image: url('../public/images/bg-simplify-section-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top 50% left 50%;
+
+  }
+
+@media (max-width:600px) {
+    body{
+        background-size:800px ;
+         background-position: 50px -50px;
+
+    }
+
+  #testimonial{
+     background-image: url('../public/images/bg-simplify-section-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top 50% left 50%;
+
+  }
+
+    
+}
+
+.hamburger{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.hamburger-top,.hamburger-middle, .hamburger-bottom{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 25px;
+    height: 3px;
+    background-color: #101010;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    transform: rotate(0);
+   
+
+}
+
+.hamburger-middle{
+    transform: translateY(7px);
+    
+}
+
+.hamburger-bottom{
+     transform: translateY(14px);
+
+}
+
+/*.hamburger{
+     cursor: pointer;
+ 
+}
+
+
+.hamburger-top,.hamburger-middle ,.hamburger-bottom{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}*/
+
+.open{
+    transform: translateY(0px) ;
+    transform: rotate(90deg);
+}
+
+.open .hamburger-top{
+    transform:rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle{
+    display: none;
+}
+.open .hamburger-bottom{
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+        
